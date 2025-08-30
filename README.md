@@ -23,6 +23,10 @@ https://github.com/user-attachments/assets/244404b6-5372-4829-8c3a-316dadec60c4
 
 2. Searchable embedded vectors
 
+https://github.com/user-attachments/assets/82b9d6c4-751f-4e89-be80-4ed2c72f96ca
+
+Do note that this is simply a very rough implementation of indexing/implementing searchable-vectors, obviously with a more precise model and more queries to the model, it'd be a LOT more precise. Do also note that this feature and the next one are both very intertwined and reflective of each other. 
+
 - On upload, we extract text per page (prefer the PDF text layer; OCR only if needed), then create page embeddings with text-embedding-3-small (1536-d).
 
 - Those vectors are stored locally in SQLite alongside the page text and pdfId.
@@ -44,6 +48,11 @@ https://github.com/user-attachments/assets/244404b6-5372-4829-8c3a-316dadec60c4
 
 
 4. PDF upload to supabase and relevant schema
+
+
+https://github.com/user-attachments/assets/76e682d7-597e-465c-aa33-256ddd64628c
+
+Note that there are several uploads of the same document (the drylabs one since I used it several times across these demos). This is for possible future implementation of version control/several "sets" of annotations for one document. 
 
 - Upload: On file drop, we create a pdfId and upload the PDF to Supabase Storage (pdfs/uploads/{pdfId}/…); a blob URL is used for instant preview.
 
