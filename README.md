@@ -10,8 +10,7 @@ Firstly before I start I'd like apologize for how long I took to solve this OA, 
 
 1. Multi-pdf support with keyword search supported amongst both.
 
-
-(Insert video)
+https://github.com/user-attachments/assets/244404b6-5372-4829-8c3a-316dadec60c4
 
 - Every uploaded PDF is tracked in a docs map ({pdfId → {name, fileUrl, ocrUrl}}).
 
